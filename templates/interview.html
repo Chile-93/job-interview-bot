@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Interview Questions</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='interview.css') }}">
+
+</head>
+<body>
+
+    <!-- 
+        This heading shows which job type the interview is for.
+        The {{ job_type }} comes from app.py, where you passed it from the form on index.html.
+        Example: "Interview for Data Science"
+    -->
+    <h2>Interview for {{ job_type }}</h2>
+
+    <!-- 
+        This form collects answers to each question.
+        When you click "Submit Answers", the data will be sent (POST) to the '/feedback' route in app.py
+    -->
+    <form action="/feedback" method="post">
+
+        <!-- 
+            Loop through the list of 4 questions passed in from the backend (app.py).
+            Each question will display with a matching textarea input for the user to write an answer.
+        -->
+        {% for i in range(4) %}
+            
+            <!-- 
+                Show the question text from the questions list.
+                Example: "Q1: What is overfitting in machine learning?"
+                This is exactly what you said you want as output.
+            -->
+            <p><strong>Q{{ i + 1 }}:</strong> {{ questions[i] }}</p>
+
+            <!-- 
+                Textarea for the user to type their answer for each question.
+                Each input has a unique name like answer1, answer2, etc., so Flask can read them later.
+            -->
+            <textarea name="answer{{ i + 1 }}" rows="4" cols="60" required></textarea><br><br>
+
+            <!-- 
+                This hidden input carries the question text along with the form.
+                Why? So when Flask receives the answer, it also knows what question it belongs to.
+            -->
+            <input type="hidden" name="question{{ i + 1 }}" value="{{ questions[i] }}">
+
+        {% endfor %}
+
+        <!-- 
+            Re-send the job type along with the form so it's still available later (for feedback, storage, etc.)
+        -->
+        <input type="hidden" name="job_type" value="{{ job_type }}">
+
+        <!-- 
+            The submit button that sends all answers + questions to the /feedback route.
+        -->
+        <input type="submit" value="Submit Answers">
+
+    </form>
+
+</body>
+</html>

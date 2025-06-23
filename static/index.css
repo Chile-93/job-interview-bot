@@ -1,0 +1,59 @@
+/* Reset and Base Styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    background-color: #f5fff5; /* soft light green background */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Form Styling */
+form {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 128, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-width: 300px;
+}
+
+/* Label */
+.choose_job {
+    font-size: 1.2rem;
+    color: #2e7d32; /* dark green */
+    font-weight: bold;
+}
+
+/* Select Dropdown */
+select {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #a5d6a7; /* light green border */
+    border-radius: 8px;
+    background-color: #e8f5e9; /* subtle green */
+}
+
+/* Submit Button */
+.submit {
+    background-color: #66bb6a; /* green */
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit:hover {
+    background-color: #4caf50; /* darker green on hover */
+}

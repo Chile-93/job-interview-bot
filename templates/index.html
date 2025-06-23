@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview Bot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+</head>
+<body>
+    <form action="/interview" method="post">
+        <label for="job_type" class="choose_job">Choose a job</label>
+         <select name="job_type" id="job_type" required>
+            <option value="Data Science">Data Science</option>
+            <option value="Software Dev">Software Dev</option>
+            <option value="UI/UX">UI/UX</option>
+            <option value="Instrumentation/control">Instrumentation/control</option>
+            <option value="Telecommunication">Telecommunication</option>
+        </select>
+        <br>
+        <input type="submit" class="submit" value="Generate interview">
+
+    </form>
+</body>
+</html>

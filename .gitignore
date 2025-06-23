@@ -1,0 +1,17 @@
+# Ignore virtual environment
+.interview_bot/
+
+# Ignore Python cache
+__pycache__/
+*.py[cod]
+
+# Ignore sensitive environment variables
+.env
+
+# Ignore executable/binaries
+ngrok.exe
+
+# OS or editor generated files (optional)
+.DS_Store
+Thumbs.db
+.vscode/
