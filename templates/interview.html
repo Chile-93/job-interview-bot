@@ -13,7 +13,9 @@
         The {{ job_type }} comes from app.py, where you passed it from the form on index.html.
         Example: "Interview for Data Science"
     -->
-    <h2>Interview for {{ job_type }}</h2>
+    <h2>Interview for {{ job_type }}</h2><br>
+    <h3>Interview Level: {{ interview_level.replace('_', ' ').title() }}</h3>
+
 
     <!-- 
         This form collects answers to each question.
@@ -52,6 +54,7 @@
             Re-send the job type along with the form so it's still available later (for feedback, storage, etc.)
         -->
         <input type="hidden" name="job_type" value="{{ job_type }}">
+        <input type="hidden" name="interview_level" value="{{ interview_level }}">
 
         <!-- 
             The submit button that sends all answers + questions to the /feedback route.

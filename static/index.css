@@ -1,59 +1,71 @@
-/* Reset and Base Styling */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
+/* General page styling */
 body {
-    height: 100vh;
-    background-color: #f5fff5; /* soft light green background */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom right, #e6f7f7, #d0f0f0);
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh;
+    margin: 0;
 }
 
-/* Form Styling */
-form {
-    background-color: #ffffff;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 8px 16px rgba(0, 128, 0, 0.15);
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    min-width: 300px;
+/* Container for the form */
+.container {
+    background-color: white;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    width: 350px;
 }
 
-/* Label */
-.choose_job {
-    font-size: 1.2rem;
-    color: #2e7d32; /* dark green */
+/* Labels */
+label {
     font-weight: bold;
+    color: #004080;
+    display: block;
+    margin-bottom: 8px;
 }
 
-/* Select Dropdown */
-select {
-    padding: 10px;
-    font-size: 1rem;
-    border: 1px solid #a5d6a7; /* light green border */
-    border-radius: 8px;
-    background-color: #e8f5e9; /* subtle green */
+/* Input field */
+.jobtype, 
+.interview_level {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 20px;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+    transition: border 0.3s ease;
 }
 
-/* Submit Button */
+/* Focus effect on input & select */
+.jobtype:focus,
+.interview_level:focus {
+    border-color: #0077cc;
+}
+
+/* Small note under dropdown */
+h6 {
+    font-size: 12px;
+    color: #666;
+    line-height: 1.4;
+    margin-bottom: 15px;
+}
+
+/* Submit button */
 .submit {
-    background-color: #66bb6a; /* green */
+    background-color: #0077cc;
     color: white;
-    padding: 10px;
     border: none;
-    border-radius: 8px;
-    font-size: 1rem;
+    padding: 12px;
+    width: 100%;
+    border-radius: 6px;
     cursor: pointer;
+    font-size: 15px;
     transition: background-color 0.3s ease;
 }
 
 .submit:hover {
-    background-color: #4caf50; /* darker green on hover */
+    background-color: #005fa3;
 }

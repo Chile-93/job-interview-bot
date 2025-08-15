@@ -16,6 +16,11 @@
             text-align: center;
             color: #004080;
         }
+        h4 {
+            text-align: center;
+            color: #0077cc;
+            margin-top: -10px;
+        }
         .qa-block {
             margin-bottom: 30px;
             padding: 20px;
@@ -35,13 +40,10 @@
 
     <!-- Display selected job type -->
     <h2>Interview Feedback for {{ job_type }}</h2>
+    <!-- Display selected interview level -->
+    <h4>Interview Level: {{ interview_level.replace('_', ' ').title() }}</h4>
 
-    <!-- 
-        Loop through the 4 Q&A pairs and show:
-        - Question
-        - User's Answer
-        - AI's Feedback (all in order)
-    -->
+    <!-- Loop through the 4 Q&A pairs -->
     {% for i in range(4) %}
         <div class="qa-block">
             <p><strong>Q{{ i+1 }}:</strong> {{ questions[i] }}</p>
@@ -49,13 +51,13 @@
         </div>
     {% endfor %}
 
-    <!-- 
-        Display the full feedback text from OpenAI.
-        This assumes you formatted the feedback in feedback.py as one complete message.
-    -->
+    <!-- Display AI feedback -->
     <div class="feedback">
-        <h3>AI Feedback:</h3>
-        <p>{{ feedback }}</p>
+        <h3>Feedback:</h3>
+        {% for line in feedback.split('\n\n') %}
+            <p>{{ line }}</p>
+            <br><br>
+        {% endfor %}
     </div>
 
 </body>
