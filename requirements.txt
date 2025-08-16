@@ -6,3 +6,4 @@ threadpoolctl==3.6.0
 gunicorn
 Flask
 openai
+python-dotenv
