@@ -13,8 +13,8 @@
         The {{ job_type }} comes from app.py, where you passed it from the form on index.html.
         Example: "Interview for Data Science"
     -->
-    <h2>Interview for {{ job_type }}</h2><br>
-    <h3>Interview Level: {{ interview_level.replace('_', ' ').title() }}</h3>
+    <h2>Interview for {{ job_type }}</h2>
+    <h5>(Interview Level: {{ interview_level.replace('_', ' ').title() }})</h5>
 
 
     <!-- 

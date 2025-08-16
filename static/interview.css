@@ -1,7 +1,7 @@
 /* General page layout */
 body {
     font-family: Arial, sans-serif;
-    background-color: #e3edf7; /* soft blue-gray background */
+    background-color: #e6f7f7; /* light blue gradient feel */
     color: #333; /* dark gray text */
     padding: 30px;
     max-width: 800px;
@@ -11,15 +11,18 @@ body {
 /* Headings */
 h2 {
     text-align: center;
-    color: #1a3d6d; /* dark blue */
-    margin-bottom: 5px;
+    color: #004080; /* dark blue from your first snippet */
+    margin-bottom: 0px; /* remove space below h2 */
 }
 
-h3 {
+h5 {
     text-align: center;
-    color: #3178c6; /* medium blue */
-    margin-top: 0;
-    font-weight: normal;
+    align-self: center;
+    align-content: center;
+    color: #0077cc; /* medium blue for subheading */
+    margin-top: 0px; /* remove space above h3 */
+    font-weight: lighter;
+    
 }
 
 /* Question text */
@@ -30,7 +33,7 @@ p {
 
 /* Form container styling */
 form {
-    background-color: #f4f7f9; /* lighter container */
+    background-color: #ffffff; /* white container for contrast */
     padding: 25px 30px;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
@@ -54,13 +57,13 @@ textarea {
 }
 
 textarea:focus {
-    border-color: #3178c6;
-    box-shadow: 0 0 5px rgba(49, 120, 198, 0.3);
+    border-color: #0077cc; /* matches your blue theme */
+    box-shadow: 0 0 5px rgba(0, 119, 204, 0.3);
 }
 
 /* Submit button styling */
 input[type="submit"] {
-    background-color: #3178c6;
+    background-color: #0077cc; /* medium blue button */
     color: #fff;
     border: none;
     padding: 12px 20px;
@@ -73,6 +76,6 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-    background-color: #1a3d6d;
+    background-color: #004080; /* darker blue on hover */
     transform: translateY(-2px);
 }
